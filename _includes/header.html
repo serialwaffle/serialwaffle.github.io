@@ -1,61 +1,26 @@
-<nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-      <a class="navbar-item" href="{{ "/" | relative_url }}">
-        <h2 class="title is-4">{{ site.title }}</h2>
-        <!-- <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28"> -->
-      </a>
-  
-      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-      </a>
+{% if site.logo %}
+    <div class="header-title">
+        {% include header-title.html %}
     </div>
-  
-    <div id="navbarBasicExample" class="navbar-menu">
-      <div class="navbar-start">
-        <a class="navbar-item">
-          Home
-        </a>
-  
-        <a class="navbar-item">
-          Documentation
-        </a>
-  
-        <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link">
-            More
-          </a>
-  
-          <div class="navbar-dropdown">
-            <a class="navbar-item sub-menu-item">
-              About
-            </a>
-            <a class="navbar-item sub-menu-item">
-              Jobs
-            </a>
-            <a class="navbar-item sub-menu-item">
-              Contact
-            </a>
-            <hr class="navbar-divider">
-            <a class="navbar-item sub-menu-item">
-              Report an issue
-            </a>
-          </div>
-        </div>
-      </div>
-  
-      <div class="navbar-end">
-        <div class="navbar-item">
-          <div class="buttons">
-            <a class="button is-link">
-              <strong>Sign up</strong>
-            </a>
-            <a class="button is-light">
-              Log in
-            </a>
-          </div>
-        </div>
-      </div>
+    <div class="header-title-mobile">
+        <section>
+        {% include header-title.html %}
+        </section>
     </div>
-  </nav>
+{% else %}
+    {% include header-title.html %}
+{% endif %}
+
+<p>{{ site.description | default: site.github.project_tagline }}</p>
+
+{% unless site.hide_project_page %}
+    {% if site.github.is_project_page %}
+    <p class="view"><a href="{{ site.github.repository_url }}">View the Project on GitHub<br><small>{{ site.github.repository_nwo }}</small></a></p>
+    {% endif %}
+
+    {% if site.github.is_user_page %}
+    <p class="view"><a href="{{ site.github.owner_url }}">View My GitHub Profile</a></p>
+    {% endif %}
+{% endunless %}
+
+{% include sidebar.html %}
