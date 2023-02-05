@@ -1,7 +1,7 @@
 title: SerialWaffle
 logo: /assets/img/hoodie.jpg
 email: serialwaffle@gmail.com
-description: CTF X InfoSec X Keyboards                                                    Security professional who dabbles in research, math, and occasionally builds keyboards. 
+description: CTF X InfoSec X Keyboards  
 favicon: true
 color-scheme: auto
 
@@ -25,4 +25,4 @@ navigation:
       - name: Image
         link: ./index.html#small-image
   - name: About Me
-    link: ./About_me.md
+    link: ./About_me.html
