@@ -25,4 +25,4 @@ navigation:
       - name: Image
         link: ./index.html#small-image
   - name: About Me
-    link: ./about.md
+    link: https://serialwaffle.github.io/about.md
