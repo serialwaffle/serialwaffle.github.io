@@ -25,4 +25,4 @@ navigation:
       - name: Image
         link: ./index.html#small-image
   - name: About Me
-    link: ./About_me.html
+    link: ./about.md
