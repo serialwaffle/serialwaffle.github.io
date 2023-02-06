@@ -17,12 +17,3 @@ platforms:
   - name: Twitter
     icon: <i class="fa-brands fa-twitter"></i>
     link: https://twitter.com/serialwaffle
-
-navigation:
-  - name: Readme
-    link: ./index.html
-    sublist:
-      - name: Image
-        link: ./index.html#small-image
-  - name: About Me
-    link: https://serialwaffle.github.io/about.html
